@@ -1,0 +1,35 @@
+{
+  "id":"indy.includes",
+  "version":"",
+  "summary":"Internet Direct (Indy) Includes Package.",
+  "tags":[
+    "indy"
+  ],
+  "copyright":"\u00A92020 Jolyon Direnko-Smith",
+  "language":"en",
+  "content":"source",
+  "dependencies":[
+  ],
+  "source":{
+      "files":[
+          "..\\lib\\system\\IdCompilerDefines.inc",
+          "..\\lib\\system\\IdDeprecatedImplBugOff.inc",
+          "..\\lib\\system\\IdDeprecatedImplBugOn.inc",
+          "..\\lib\\system\\IdOverflowCheckingOff.inc",
+          "..\\lib\\system\\IdOverflowCheckingOn.inc",
+          "..\\lib\\system\\IdRangeCheckingOff.inc",
+          "..\\lib\\system\\IdRangeCheckingOn.inc",
+          "..\\lib\\system\\IdStackFramesOff.inc",
+          "..\\lib\\system\\IdStackFramesOn.inc",
+          "..\\lib\\system\\IdSymbolDeprecatedOff.inc",
+          "..\\lib\\system\\IdSymbolDeprecatedOn.inc",
+          "..\\lib\\system\\IdSymbolPlatformOff.inc",
+          "..\\lib\\system\\IdSymbolPlatformOn.inc",
+          "..\\lib\\system\\IdUnitPlatformOff.inc",
+          "..\\lib\\system\\IdUnitPlatformOn.inc",
+          "..\\lib\\system\\IdVers.inc",
+          "..\\lib\\protocols\\IdIOChecksOff.inc",
+          "..\\lib\\protocols\\IdIOChecksOn.inc"
+      ]
+    }
+}

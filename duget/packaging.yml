@@ -1,0 +1,51 @@
+trigger:
+- develop*
+- feature*
+- master
+
+pr:
+- develop*
+- feature*
+
+resources:
+  repositories:
+  - repository: templates
+    type: github
+    name: deltics/azure-pipeline-templates
+    ref: refs/heads/develop
+    endpoint: GitHubTemplates
+
+pool:
+  name: $(AgentPool)
+  demands: Delphi
+
+jobs:
+- job: GitVersion
+  steps:
+  - template: gitversion.yml@templates
+
+- job: Packaging
+  condition: and(succeeded(), ne(variables['SkipPackaging'], 'yes'))
+  dependsOn:
+  - GitVersion  # The dependency on GitVersion must be explicit in order to gain access to GitVersion output variables 
+  variables:
+    SemVer: $[ dependencies.GitVersion.outputs['GitVersion.SemVer'] ]
+    PreReleaseLabel: $[ dependencies.GitVersion.outputs['GitVersion.PreReleaseLabel'] ]
+  pool:
+    name: $(AgentPool)
+    demands: duget
+  steps:
+  - powershell: |
+      Set-Location duget
+      duget pack --version $(SemVer) --log:$(DugetLogLevel)
+    displayName: Create Duget packages
+
+  - powershell: |
+      $feed = '$(PreReleaseLabel)'
+      if ($feed -eq '') {
+        $feed = 'release'
+      }
+      Set-Location duget
+      duget push --feed:$feed --log:$(DugetLogLevel)
+    displayName: Publish Duget packages
+    

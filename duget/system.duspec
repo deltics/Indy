@@ -1,0 +1,52 @@
+{
+  "id":"indy.system",
+  "version":"",
+  "summary":"Internet Direct (Indy) System Package.",
+  "tags":[
+    "indy"
+  ],
+  "copyright":"\u00A92020 Jolyon Direnko-Smith",
+  "language":"en",
+  "content":"source",
+  "dependencies":[
+      "indy.includes:$version"
+  ],
+  "source":{
+      "files":[
+          "..\\lib\\system\\IdAntiFreezeBase.pas",
+          "..\\lib\\system\\IdAssemblyInfo.pas",
+          "..\\lib\\system\\IdBaseComponent.pas",
+          "..\\lib\\system\\IdComponent.pas",
+          "..\\lib\\system\\IdCTypes.pas",
+          "..\\lib\\system\\IdException.pas",
+          "..\\lib\\system\\IdGlobal.pas",
+          "..\\lib\\system\\IdIconv.pas",
+          "..\\lib\\system\\IdIDN.pas",
+          "..\\lib\\system\\IdResourceStrings.pas",
+          "..\\lib\\system\\IdResourceStringsDotNet11.pas",
+          "..\\lib\\system\\IdResourceStringsIconv.pas",
+          "..\\lib\\system\\IdResourceStringsKylixCompat.pas",
+          "..\\lib\\system\\IdResourceStringsTextEncoding.pas",
+          "..\\lib\\system\\IdResourceStringsUnix.pas",
+          "..\\lib\\system\\IdResourceStringsVCLPosix.pas",
+          "..\\lib\\system\\IdStack.pas",
+          "..\\lib\\system\\IdStackBSDBase.pas",
+          "..\\lib\\system\\IdStackConsts.pas",
+          "..\\lib\\system\\IdStackDotNet.pas",
+          "..\\lib\\system\\IdStackLibc.pas",
+          "..\\lib\\system\\IdStackLinux.pas",
+          "..\\lib\\system\\IdStackUnix.pas",
+          "..\\lib\\system\\IdStackVCLPosix.pas",
+          "..\\lib\\system\\IdStackWindows.pas",
+          "..\\lib\\system\\IdStream.pas",
+          "..\\lib\\system\\IdStreamNET.pas",
+          "..\\lib\\system\\IdStreamVCL.pas",
+          "..\\lib\\system\\IdStruct.pas",
+          "..\\lib\\system\\IdTransactedFileStream.pas",
+          "..\\lib\\system\\IdVCLPosixSupplemental.pas",
+          "..\\lib\\system\\IdWinsock2.pas",
+          "..\\lib\\system\\IdWship6.pas",
+          "..\\lib\\system\\indysystemfpc.pas"
+      ]
+    }
+}
